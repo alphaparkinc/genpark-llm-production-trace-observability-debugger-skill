@@ -1,0 +1,38 @@
+{
+  "name": "genpark-llm-production-trace-observability-debugger-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - OpenTelemetry-grade LLM production trace collector, latency profiler & prompt regression debugger.",
+  "author": "genpark",
+  "category": "engineering",
+  "tags": [
+    "llm-observability",
+    "opentelemetry",
+    "trace-debugger",
+    "production-ai",
+    "llmops"
+  ],
+  "inputs": {
+    "trace_session_id": {
+      "type": "string"
+    },
+    "model_id": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "latency_breakdown_ms": {
+      "type": "object"
+    },
+    "prompt_regression_detected": {
+      "type": "boolean"
+    },
+    "top_error_spans": {
+      "type": "array"
+    },
+    "optimization_suggestions": {
+      "type": "array"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
